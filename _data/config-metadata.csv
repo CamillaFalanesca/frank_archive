@@ -5,7 +5,8 @@ date,Date Created,
 description,Description,
 transcription,Transcription,
 subject,Subjects,true
-location,Location
+location,Postmarked Location
+location,Destination
 latitude,Latitude
 longitude,Longitude
 source,Source
