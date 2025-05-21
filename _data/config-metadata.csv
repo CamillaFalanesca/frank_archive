@@ -6,7 +6,7 @@ description,Description,
 transcription,Transcription,
 subject,Subjects,true
 location,Postmarked Location
-location,Destination
+destination,Destination
 latitude,Latitude
 longitude,Longitude
 source,Source
