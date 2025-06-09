@@ -15,14 +15,19 @@
     - "centered" = give "true" to add mx-auto class on the card to center it (don't use with float!)
     - "float" = will use responsive float utility to add float on desktop (will not float on mobile), choose from "start" (left) or "end" (right)
 
-{%- endcomment -%}
 {%- if include.objectid contains '/' -%}
-{%- capture src -%}{{ include.objectid | relative_url }}{% endcapture %}
-{%- capture alt -%}{{ include.alt | default: include.title }}{% endcapture %}
+  {%- capture src -%}{{ include.objectid | relative_url }}{% endcapture %}
+  {%- capture alt -%}{{ include.alt | default: include.title }}{% endcapture %}
 {%- elsif include.objectid -%}
-{%- assign item = site.data[site.metadata] | where: "objectid", include.objectid | first -%}
-{%- capture src -%}{% if item.filename contains '/' %}{{ item.filename | relative_url }}{% else %}{{ '/objects/' | append: item.filename | relative_url }}{% endif %}{% endcapture %}
-{%- capture alt -%}{{ item.title | default: include.title }}{% endcapture %}
+  {%- assign item = site.data[site.metadata] | where: "objectid", include.objectid | first -%}
+  {%- if item.image and item.image != "" -%}
+    {%- capture src -%}{{ item.image | relative_url }}{% endcapture %}
+  {%- elsif item.filename contains '/' -%}
+    {%- capture src -%}{{ item.filename | relative_url }}{% endcapture %}
+  {%- else -%}
+    {%- capture src -%}{{ '/objects/' | append: item.filename | relative_url }}{% endcapture %}
+  {%- endif -%}
+  {%- capture alt -%}{{ item.title | default: include.title }}{% endcapture %}
 {%- endif -%}
 <div class="card mb-3{% if include.float %} feature-float-{{ include.float }}{% endif %}{% if include.width %} feature-w-{{ include.width }}{% endif %}{% if include.centered %} mx-auto{% endif %}">
     {% if src %}<img class="card-img-top" src="{{ src }}" alt="{{ alt | escape }}">{%- endif -%}
