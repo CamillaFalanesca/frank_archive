@@ -14,14 +14,6 @@ credits: true
 
 ## About the Collection
 
-This site is generated using [CollectionBuilder-GH](https://collectionbuilding.github.io/gh/), a project to create a free and simple digital collection using [GitHub Pages](https://pages.github.com/) from: 
+This digital collection of postcards from the first half of the twentieth century, spanning Europe and the USA, has been prepared by a group of graduate students in the History Department at the University of California Santa Barbara. This graduate seminar project introduced students to the process of cataloging and digitizing archives for a digital collection. Through the project, students engaged with how to structure and formulate metadata categories. It also included reflecting on larger questions such as working on a system of archiving and organizing information that conveys the value of these records. The group strongly felt that an emphasis on narrative is going to be the central focus of the digital collection. The postcards trace Frank and Elsie’s relationship as well as Frank’s travels. In the process of uncovering Frank’s story, genealogy websites like FamilySearch and Ancestry have been important tools. 
 
-- a CSV of collection metadata
-- a folder of JPG images or PDF documents
 
-The template repository features four objects from the University of Idaho Library's [Digital Collections](https://www.lib.uidaho.edu/digital). 
-
-For full details of creating your own collection site, visit [CollectionBuilder Documentation](https://collectionbuilder.github.io/cb-docs/)!
-
-<!-- IMPORTANT!!! DELETE this comment and the include below when you are finished editing this page for your collection. The include below introduces about page features. They will show up on your collection's about page until you delete it.  -->
-{% include cb/about_the_about.md %} 
